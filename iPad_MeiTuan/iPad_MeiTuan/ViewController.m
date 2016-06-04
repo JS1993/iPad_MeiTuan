@@ -9,10 +9,13 @@
 #import "ViewController.h"
 #import "JSTopItemView.h"
 #import "JSCategoryVC.h"
+#import "JSZoneViewController.h"
 
 @interface ViewController ()
 
 @property(nonatomic,strong)JSCategoryVC* categoryVC;
+
+@property(nonatomic,strong)JSZoneViewController* zoneVC;
 
 @property(nonatomic,weak)UIBarButtonItem* categoryItem;
 
@@ -24,6 +27,17 @@
 @end
 
 @implementation ViewController
+
+
+/*地区界面懒加载*/
+-(JSZoneViewController *)zoneVC
+{
+    if (_zoneVC==nil) {
+        _zoneVC=[[JSZoneViewController alloc]init];
+        _zoneVC.modalPresentationStyle=UIModalPresentationPopover;
+    }
+    return _zoneVC;
+}
 
 
 /*分类界面懒加载*/
@@ -90,7 +104,9 @@
  *  点击了区域
  */
 -(void)zoneClicked{
+    self.zoneVC.popoverPresentationController.barButtonItem=self.zoneItem;
     
+    [self presentViewController:self.zoneVC animated:YES completion:nil];
 }
 
 

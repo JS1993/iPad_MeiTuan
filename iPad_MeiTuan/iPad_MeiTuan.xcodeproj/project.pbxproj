@@ -34,6 +34,7 @@
 		CF19AD6C1D02C35300634E1A /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD6B1D02C35300634E1A /* CategoryModel.m */; };
 		CF19AD721D02C41600634E1A /* ZoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD711D02C41600634E1A /* ZoneModel.m */; };
 		CF19AD751D02C44C00634E1A /* SortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD741D02C44C00634E1A /* SortModel.m */; };
+		CF19AD781D02CB0600634E1A /* JSZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD771D02CB0600634E1A /* JSZoneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		CF19AD711D02C41600634E1A /* ZoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZoneModel.m; path = ../ZoneModel.m; sourceTree = "<group>"; };
 		CF19AD731D02C44C00634E1A /* SortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortModel.h; sourceTree = "<group>"; };
 		CF19AD741D02C44C00634E1A /* SortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortModel.m; sourceTree = "<group>"; };
+		CF19AD761D02CB0600634E1A /* JSZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSZoneViewController.h; sourceTree = "<group>"; };
+		CF19AD771D02CB0600634E1A /* JSZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSZoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */,
 				CF19AD421D02BE5600634E1A /* JSCategoryVC.h */,
 				CF19AD431D02BE5600634E1A /* JSCategoryVC.m */,
+				CF19AD761D02CB0600634E1A /* JSZoneViewController.h */,
+				CF19AD771D02CB0600634E1A /* JSZoneViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */,
 				CF19AD0C1D02AE5F00634E1A /* ViewController.m in Sources */,
 				CF19AD721D02C41600634E1A /* ZoneModel.m in Sources */,
+				CF19AD781D02CB0600634E1A /* JSZoneViewController.m in Sources */,
 				CF19AD641D02C2DC00634E1A /* MJProperty.m in Sources */,
 				CF19AD631D02C2DC00634E1A /* MJFoundation.m in Sources */,
 				CF19AD651D02C2DC00634E1A /* MJType.m in Sources */,

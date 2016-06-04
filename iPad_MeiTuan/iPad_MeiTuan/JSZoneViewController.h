@@ -1,5 +1,5 @@
 //
-//  JSTwoTableView.h
+//  JSZoneViewController.h
 //  iPad_MeiTuan
 //
 //  Created by  江苏 on 16/6/4.
@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSTwoTableView : UIView
-
-
-@property(strong,nonatomic)NSArray* models;
-
-+(instancetype)twoTableView;
+@interface JSZoneViewController : UIViewController
 
 @end
