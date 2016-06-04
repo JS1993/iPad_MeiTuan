@@ -15,7 +15,7 @@
 #import "ZoneModel.h"
 #import "JSSortViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIPopoverPresentationControllerDelegate>
 
 @property(nonatomic,strong)JSCategoryVC* categoryVC;
 
@@ -41,6 +41,7 @@
     if (_sortVC==nil) {
         _sortVC=[[JSSortViewController alloc]init];
         _sortVC.modalPresentationStyle=UIModalPresentationPopover;
+        _sortVC.popoverPresentationController.delegate=self;
     }
     return _sortVC;
 }
@@ -52,6 +53,7 @@
     if (_zoneVC==nil) {
         _zoneVC=[[JSZoneViewController alloc]init];
         _zoneVC.modalPresentationStyle=UIModalPresentationPopover;
+        _zoneVC.popoverPresentationController.delegate=self;
     }
     return _zoneVC;
 }
@@ -63,6 +65,7 @@
     if (_categoryVC==nil) {
         _categoryVC=[[JSCategoryVC alloc]init];
         _categoryVC.modalPresentationStyle=UIModalPresentationPopover;
+        _categoryVC.popoverPresentationController.delegate=self;
     }
     return _categoryVC;
 }
@@ -76,6 +79,7 @@
     
 }
 
+//添加监听通知
 -(void)setUpNoti{
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:JSCategoryDidChangeNotification object:nil];
@@ -87,6 +91,7 @@
 
 //排序方式改变时调用
 -(void)sortDidChange:(NSNotification*)noti{
+    
     //拿到顶部的分类视图进行修改
     JSTopItemView* sortItemView=(JSTopItemView*)self.sortItem.customView;
     
@@ -94,6 +99,9 @@
     
     //退出控制器
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self enableAllItems];
+    
 }
 
 //区域改变的通知方法
@@ -118,10 +126,13 @@
     //退出控制器
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    [self enableAllItems];
+    
 }
 
 //分类改变的通知方法
 -(void)categoryDidChange:(NSNotification*)noti{
+    
     CategoryModel* category=noti.userInfo[JSCategoryDidChangeNotificationKey];
     NSString* subCategory=noti.userInfo[JSSubCategoryDidChangeNotificationKey];
     
@@ -144,7 +155,11 @@
     
     //退出控制器
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self enableAllItems];
 }
+
+//设置顶部视图
 -(void)setUpNav{
     
     //图标
@@ -187,6 +202,8 @@
     self.categoryVC.popoverPresentationController.barButtonItem=self.categoryItem;
     
     [self presentViewController:self.categoryVC animated:YES completion:nil];
+    
+    [self disableAllItems];
 }
 
 /**
@@ -196,6 +213,8 @@
     self.zoneVC.popoverPresentationController.barButtonItem=self.zoneItem;
     
     [self presentViewController:self.zoneVC animated:YES completion:nil];
+    
+    [self disableAllItems];
 }
 
 
@@ -206,7 +225,39 @@
     self.sortVC.popoverPresentationController.barButtonItem=self.sortItem;
     
     [self presentViewController:self.sortVC animated:YES completion:nil];
+    
+    [self disableAllItems];
 }
+
+#pragma mark--修复BUG，让弹出视图的时候，所有按钮不能点击
+
+-(void)disableAllItems{
+    self.categoryItem.enabled=NO;
+    self.sortItem.enabled=NO;
+    self.zoneItem.enabled=NO;
+}
+
+-(void)enableAllItems{
+    
+    self.categoryItem.enabled=YES;
+    self.sortItem.enabled=YES;
+    self.zoneItem.enabled=YES;
+    
+}
+
+#pragma mark--UIPopoverPresentationControllerDelegate 当弹出的控制器消失时调用
+
+//此处有BUG，连续点击两次之后就不响应了
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
+    
+    [self enableAllItems];
+}
+
+//修复BUG辅助方法，当两次之后，双击其他空白区域，可恢复，但是每次都需要双击，尚不完善
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self enableAllItems];
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];

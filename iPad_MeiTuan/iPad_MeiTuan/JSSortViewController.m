@@ -57,6 +57,8 @@
         
         btn.frame=CGRectMake(LRMargin, topMargin+(topMargin+btnH)*i, btnW, btnH);
         
+        btn.tag=i;
+        
         [btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:btn];

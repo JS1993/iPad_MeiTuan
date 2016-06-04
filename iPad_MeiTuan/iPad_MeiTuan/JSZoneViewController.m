@@ -52,6 +52,9 @@
     
     [self twoTableView];
     
+    //设置控制器在popover中显示的尺寸
+    self.preferredContentSize=CGSizeMake(320,400);
+    
 }
 
 #pragma mark--JSTwoTableViewDataSource
