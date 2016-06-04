@@ -76,7 +76,16 @@
         
         [self.rightTableView reloadData];
         
+        if ([self.delegate respondsToSelector:@selector(twoTableView:andLeftTitleInRow:)]) {
+            [self.delegate twoTableView:self didSelectedLeftIndex:self.leftTableView.indexPathForSelectedRow.row];
+        }
+        
     }else{
+        
+        if ([self.delegate respondsToSelector:@selector(twoTableView:didSelectedRightIndex:andLeftIndex:)]) {
+            [self.delegate twoTableView:self didSelectedRightIndex:indexPath.row andLeftIndex:self.leftTableView.indexPathForSelectedRow.row];
+        }
+        
         
     }
 }

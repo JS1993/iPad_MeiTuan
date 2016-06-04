@@ -24,10 +24,21 @@
 
 @end
 
+
+@protocol JSTwoTableViewDelegate  <NSObject>
+
+@optional
+
+-(void)twoTableView:(JSTwoTableView*)twoTableView didSelectedLeftIndex:(NSInteger)leftIndex;
+-(void)twoTableView:(JSTwoTableView *)twoTableView didSelectedRightIndex:(NSInteger)rightIndex andLeftIndex:(NSInteger)leftIndex;
+@end
+
 @interface JSTwoTableView : UIView
 
 +(instancetype)twoTableView;
 
 @property(nonatomic,strong)id<JSTwoTableViewDataSource> dataSource;
+
+@property(nonatomic,strong)id<JSTwoTableViewDelegate> delegate;
 
 @end

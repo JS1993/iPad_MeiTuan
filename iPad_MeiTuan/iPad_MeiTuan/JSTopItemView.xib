@@ -17,14 +17,14 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vdx-Ks-ozX">
-                    <rect key="frame" x="46" y="20" width="94" height="20"/>
+                    <rect key="frame" x="46" y="20.5" width="94" height="19.5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美团" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sOw-iO-LDe">
-                    <rect key="frame" x="46" y="0.0" width="94" height="20"/>
+                    <rect key="frame" x="46" y="0.0" width="94" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,8 +33,8 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4yH-YF-Mwu">
                     <rect key="frame" x="0.0" y="0.0" width="140" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <inset key="imageEdgeInsets" minX="-39" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Button" image="icon_category_-1"/>
+                    <inset key="imageEdgeInsets" minX="-88" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_category_-1"/>
                     <state key="highlighted" image="icon_category_highlighted_-1"/>
                 </button>
             </subviews>

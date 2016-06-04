@@ -37,6 +37,7 @@
 		CF19AD781D02CB0600634E1A /* JSZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD771D02CB0600634E1A /* JSZoneViewController.m */; };
 		CF19AD7B1D02CF0000634E1A /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD7A1D02CF0000634E1A /* LeftTableViewCell.m */; };
 		CF19AD7E1D02CF0800634E1A /* RightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD7D1D02CF0800634E1A /* RightTableViewCell.m */; };
+		CF19AD811D02E6ED00634E1A /* JSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD801D02E6ED00634E1A /* JSConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		CF19AD7A1D02CF0000634E1A /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
 		CF19AD7C1D02CF0800634E1A /* RightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTableViewCell.h; sourceTree = "<group>"; };
 		CF19AD7D1D02CF0800634E1A /* RightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTableViewCell.m; sourceTree = "<group>"; };
+		CF19AD7F1D02E6ED00634E1A /* JSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSConst.h; sourceTree = "<group>"; };
+		CF19AD801D02E6ED00634E1A /* JSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSConst.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 		CF19AD041D02AE5F00634E1A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF19AD7F1D02E6ED00634E1A /* JSConst.h */,
+				CF19AD801D02E6ED00634E1A /* JSConst.m */,
 				CF19AD501D02C2DC00634E1A /* MJExtension */,
 				CF19AD4A1D02C25200634E1A /* categories.plist */,
 				CF19AD4B1D02C25200634E1A /* gz.plist */,
@@ -415,6 +420,7 @@
 			files = (
 				CF19AD621D02C2DC00634E1A /* MJExtensionConst.m in Sources */,
 				CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */,
+				CF19AD811D02E6ED00634E1A /* JSConst.m in Sources */,
 				CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */,
 				CF19AD0C1D02AE5F00634E1A /* ViewController.m in Sources */,
 				CF19AD721D02C41600634E1A /* ZoneModel.m in Sources */,

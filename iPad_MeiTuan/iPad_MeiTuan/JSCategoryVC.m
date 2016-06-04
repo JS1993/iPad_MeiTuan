@@ -10,8 +10,9 @@
 #import "JSTwoTableView.h"
 #import "CategoryModel.h"
 #import "MJExtension.h"
+#import "JSConst.h"
 
-@interface JSCategoryVC ()<JSTwoTableViewDataSource>
+@interface JSCategoryVC ()<JSTwoTableViewDataSource,JSTwoTableViewDelegate>
 
 @property(nonatomic,strong)JSTwoTableView* twoTableView;
 
@@ -38,8 +39,9 @@
 {
     if (_twoTableView==nil) {
         _twoTableView=[JSTwoTableView twoTableView];
-        _twoTableView.frame=self.view.bounds;
         _twoTableView.dataSource=self;
+        _twoTableView.delegate=self;
+        _twoTableView.frame=self.view.bounds;
         [self.view addSubview:_twoTableView];
     }
     return _twoTableView;
@@ -51,6 +53,7 @@
     [self twoTableView];
     
 }
+
 #pragma mark--JSTwoTableViewDataSource
 
 -(NSInteger)numberOfRowsInLeftTableView:(JSTwoTableView*)twoTableView{
@@ -75,5 +78,29 @@
 -(UIImage*)twoTableView:(JSTwoTableView*)twoTableView andHighLightedImageInRow:(NSInteger)row{
     CategoryModel* cateModel=self.Categories[row];
     return [UIImage imageNamed:cateModel.small_highlighted_icon];
+}
+
+#pragma mark--JSTwoTableViewDelegate
+
+-(void)twoTableView:(JSTwoTableView *)twoTableView didSelectedLeftIndex:(NSInteger)leftIndex{
+    CategoryModel* cateModel=self.Categories[leftIndex];
+    
+    NSDictionary* userInfo=@{JSCategoryDidChangeNotificationKey:cateModel};
+    [[NSNotificationCenter defaultCenter] postNotificationName:JSCategoryDidChangeNotification object:nil userInfo:userInfo];
+}
+
+-(void)twoTableView:(JSTwoTableView *)twoTableView didSelectedRightIndex:(NSInteger)rightIndex andLeftIndex:(NSInteger)leftIndex{
+    
+    CategoryModel* cateModel=self.Categories[leftIndex];
+    NSString* subCategory=cateModel.subcategories[rightIndex];
+    NSDictionary* userInfo=@{JSCategoryDidChangeNotificationKey:cateModel,
+                             JSSubCategoryDidChangeNotificationKey:subCategory};
+    [[NSNotificationCenter defaultCenter] postNotificationName:JSCategoryDidChangeNotification object:nil userInfo:userInfo];
+    
+}
+
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 @end

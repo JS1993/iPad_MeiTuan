@@ -10,6 +10,8 @@
 #import "JSTopItemView.h"
 #import "JSCategoryVC.h"
 #import "JSZoneViewController.h"
+#import "JSConst.h"
+#import "CategoryModel.h"
 
 @interface ViewController ()
 
@@ -54,8 +56,30 @@
     [super viewDidLoad];
    
     [self setUpNav];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:JSCategoryDidChangeNotification object:nil];
+    
 }
 
+-(void)categoryDidChange:(NSNotification*)noti{
+    CategoryModel* category=noti.userInfo[JSCategoryDidChangeNotificationKey];
+    NSString* subCategory=noti.userInfo[JSSubCategoryDidChangeNotificationKey];
+    
+    //拿到顶部的分类视图进行修改
+    JSTopItemView* categoryItemView=(JSTopItemView*)self.categoryItem.customView;
+    
+    if (!subCategory) {//如果没有子类
+        
+        [categoryItemView setTitle:@"美团"];
+        [categoryItemView setSubTitle:category.name];
+        
+    }else{
+        
+        [categoryItemView setTitle:category.name];
+        [categoryItemView setSubTitle:subCategory];
+        
+    }
+}
 -(void)setUpNav{
     
     //图标
