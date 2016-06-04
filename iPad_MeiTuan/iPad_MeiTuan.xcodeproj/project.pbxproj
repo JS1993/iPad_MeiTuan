@@ -14,6 +14,9 @@
 		CF19AD111D02AE5F00634E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD101D02AE5F00634E1A /* Assets.xcassets */; };
 		CF19AD1F1D02AE5F00634E1A /* iPad_MeiTuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD1E1D02AE5F00634E1A /* iPad_MeiTuanTests.m */; };
 		CF19AD2A1D02AE5F00634E1A /* iPad_MeiTuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD291D02AE5F00634E1A /* iPad_MeiTuanUITests.m */; };
+		CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */; };
+		CF19AD3F1D02B42800634E1A /* JSTopItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD3E1D02B42800634E1A /* JSTopItemView.m */; };
+		CF19AD411D02B47700634E1A /* JSTopItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD401D02B47700634E1A /* JSTopItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		CF19AD251D02AE5F00634E1A /* iPad_MeiTuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPad_MeiTuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF19AD291D02AE5F00634E1A /* iPad_MeiTuanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPad_MeiTuanUITests.m; sourceTree = "<group>"; };
 		CF19AD2B1D02AE5F00634E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF19AD3A1D02B22F00634E1A /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
+		CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		CF19AD3D1D02B42800634E1A /* JSTopItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopItemView.h; sourceTree = "<group>"; };
+		CF19AD3E1D02B42800634E1A /* JSTopItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopItemView.m; sourceTree = "<group>"; };
+		CF19AD401D02B47700634E1A /* JSTopItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,9 @@
 		CF19AD381D02AEDB00634E1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF19AD3D1D02B42800634E1A /* JSTopItemView.h */,
+				CF19AD3E1D02B42800634E1A /* JSTopItemView.m */,
+				CF19AD401D02B47700634E1A /* JSTopItemView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,6 +168,8 @@
 			children = (
 				CF19AD0A1D02AE5F00634E1A /* ViewController.h */,
 				CF19AD0B1D02AE5F00634E1A /* ViewController.m */,
+				CF19AD3A1D02B22F00634E1A /* JSNavigationController.h */,
+				CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF19AD411D02B47700634E1A /* JSTopItemView.xib in Resources */,
 				CF19AD111D02AE5F00634E1A /* Assets.xcassets in Resources */,
 				CF19AD0F1D02AE5F00634E1A /* Main.storyboard in Resources */,
 			);
@@ -293,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */,
 				CF19AD0C1D02AE5F00634E1A /* ViewController.m in Sources */,
 				CF19AD091D02AE5F00634E1A /* AppDelegate.m in Sources */,
+				CF19AD3F1D02B42800634E1A /* JSTopItemView.m in Sources */,
 				CF19AD061D02AE5F00634E1A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +531,7 @@
 				CF19AD301D02AE5F00634E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF19AD311D02AE5F00634E1A /* Build configuration list for PBXNativeTarget "iPad_MeiTuanTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +540,7 @@
 				CF19AD331D02AE5F00634E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF19AD341D02AE5F00634E1A /* Build configuration list for PBXNativeTarget "iPad_MeiTuanUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +549,7 @@
 				CF19AD361D02AE5F00634E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
