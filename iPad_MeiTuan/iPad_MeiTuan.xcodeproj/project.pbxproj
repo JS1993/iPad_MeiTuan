@@ -31,6 +31,9 @@
 		CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD5D1D02C2DC00634E1A /* NSObject+MJKeyValue.m */; };
 		CF19AD681D02C2DC00634E1A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD5F1D02C2DC00634E1A /* NSObject+MJProperty.m */; };
 		CF19AD691D02C2DC00634E1A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD611D02C2DC00634E1A /* NSString+MJExtension.m */; };
+		CF19AD6C1D02C35300634E1A /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD6B1D02C35300634E1A /* CategoryModel.m */; };
+		CF19AD721D02C41600634E1A /* ZoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD711D02C41600634E1A /* ZoneModel.m */; };
+		CF19AD751D02C44C00634E1A /* SortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD741D02C44C00634E1A /* SortModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,12 @@
 		CF19AD5F1D02C2DC00634E1A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		CF19AD601D02C2DC00634E1A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		CF19AD611D02C2DC00634E1A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		CF19AD6A1D02C35300634E1A /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		CF19AD6B1D02C35300634E1A /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		CF19AD701D02C41600634E1A /* ZoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZoneModel.h; path = ../ZoneModel.h; sourceTree = "<group>"; };
+		CF19AD711D02C41600634E1A /* ZoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZoneModel.m; path = ../ZoneModel.m; sourceTree = "<group>"; };
+		CF19AD731D02C44C00634E1A /* SortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortModel.h; sourceTree = "<group>"; };
+		CF19AD741D02C44C00634E1A /* SortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +201,12 @@
 		CF19AD371D02AE6C00634E1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF19AD701D02C41600634E1A /* ZoneModel.h */,
+				CF19AD711D02C41600634E1A /* ZoneModel.m */,
+				CF19AD6A1D02C35300634E1A /* CategoryModel.h */,
+				CF19AD6B1D02C35300634E1A /* CategoryModel.m */,
+				CF19AD731D02C44C00634E1A /* SortModel.h */,
+				CF19AD741D02C44C00634E1A /* SortModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -387,11 +402,14 @@
 				CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */,
 				CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */,
 				CF19AD0C1D02AE5F00634E1A /* ViewController.m in Sources */,
+				CF19AD721D02C41600634E1A /* ZoneModel.m in Sources */,
 				CF19AD641D02C2DC00634E1A /* MJProperty.m in Sources */,
 				CF19AD631D02C2DC00634E1A /* MJFoundation.m in Sources */,
 				CF19AD651D02C2DC00634E1A /* MJType.m in Sources */,
 				CF19AD091D02AE5F00634E1A /* AppDelegate.m in Sources */,
+				CF19AD751D02C44C00634E1A /* SortModel.m in Sources */,
 				CF19AD691D02C2DC00634E1A /* NSString+MJExtension.m in Sources */,
+				CF19AD6C1D02C35300634E1A /* CategoryModel.m in Sources */,
 				CF19AD3F1D02B42800634E1A /* JSTopItemView.m in Sources */,
 				CF19AD681D02C2DC00634E1A /* NSObject+MJProperty.m in Sources */,
 				CF19AD661D02C2DC00634E1A /* NSObject+MJCoding.m in Sources */,
