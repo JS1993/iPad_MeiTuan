@@ -45,7 +45,12 @@
     return _twoTableView;
 }
 
-
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [self twoTableView];
+    
+}
 #pragma mark--JSTwoTableViewDataSource
 
 -(NSInteger)numberOfRowsInLeftTableView:(JSTwoTableView*)twoTableView{
@@ -62,4 +67,13 @@
     return cateModel.subcategories;
 }
 
+-(UIImage *)twoTableView:(JSTwoTableView *)twoTableView andImageInRow:(NSInteger)row{
+    CategoryModel* cateModel=self.Categories[row];
+    return [UIImage imageNamed:cateModel.small_icon];
+}
+
+-(UIImage*)twoTableView:(JSTwoTableView*)twoTableView andHighLightedImageInRow:(NSInteger)row{
+    CategoryModel* cateModel=self.Categories[row];
+    return [UIImage imageNamed:cateModel.small_highlighted_icon];
+}
 @end

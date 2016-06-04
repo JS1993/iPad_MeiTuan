@@ -50,6 +50,12 @@
         
         cell.textLabel.text=[self.dataSource twoTableView:self andLeftTitleInRow:indexPath.row];
         
+        if ([self.dataSource respondsToSelector:@selector(twoTableView:andImageInRow:)]) {
+            cell.imageView.image=[self.dataSource twoTableView:self andImageInRow:indexPath.row];
+        }
+        if ([self.dataSource respondsToSelector:@selector(twoTableView:andHighLightedImageInRow:)]) {
+            cell.imageView.highlightedImage=[self.dataSource twoTableView:self andHighLightedImageInRow:indexPath.row];
+        } 
         
     }else{
         

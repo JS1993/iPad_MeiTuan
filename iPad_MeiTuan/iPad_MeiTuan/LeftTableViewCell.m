@@ -11,13 +11,18 @@
 @implementation LeftTableViewCell
 
 +(instancetype)cellWithTableView:(UITableView*)tableView{
+    
     static NSString* identifier=@"leftCell";
+    
     LeftTableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:identifier];
+    
     if (cell==nil) {
         cell=[[LeftTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    
     cell.backgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
     cell.selectedBackgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+    
     return cell;
 }
 

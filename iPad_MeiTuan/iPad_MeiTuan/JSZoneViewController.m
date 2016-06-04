@@ -27,7 +27,7 @@
 -(NSArray *)zones
 {
     if (_zones==nil) {
-        _zones=[ZoneModel objectArrayWithFilename:@"sorts.plist"];
+        _zones=[ZoneModel objectArrayWithFilename:@"gz.plist"];
     }
     return _zones;
 }
@@ -45,7 +45,12 @@
     return _twoTableView;
 }
 
-
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [self twoTableView];
+    
+}
 
 #pragma mark--JSTwoTableViewDataSource
 

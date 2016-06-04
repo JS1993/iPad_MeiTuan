@@ -18,6 +18,9 @@
 
 -(NSArray*)twoTableView:(JSTwoTableView*)twoTableView andSubDataOfRow:(NSInteger)row;
 
+@optional
+-(UIImage*)twoTableView:(JSTwoTableView*)twoTableView andImageInRow:(NSInteger)row;
+-(UIImage*)twoTableView:(JSTwoTableView*)twoTableView andHighLightedImageInRow:(NSInteger)row;
 
 @end
 
