@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSTwoTableView;
+@protocol JSTwoTableViewDataSource <NSObject>
+
+@required
+-(NSInteger)numberOfRowsInLeftTableView:(JSTwoTableView*)twoTableView;
+
+-(NSString*)twoTableView:(JSTwoTableView*)twoTableView andLeftTitleInRow:(NSInteger)row;
+
+-(NSArray*)twoTableView:(JSTwoTableView*)twoTableView andSubDataOfRow:(NSInteger)row;
+
+
+@end
+
 @interface JSTwoTableView : UIView
 
-
-@property(strong,nonatomic)NSArray* models;
-
 +(instancetype)twoTableView;
+
+@property(nonatomic,strong)id<JSTwoTableViewDataSource> dataSource;
 
 @end

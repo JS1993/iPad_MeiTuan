@@ -8,6 +8,8 @@
 
 #import "JSTwoTableView.h"
 #import "CategoryModel.h"
+#import "LeftTableViewCell.h"
+#import "RightTableViewCell.h"
 
 
 @interface JSTwoTableView()<UITableViewDelegate,UITableViewDataSource>
@@ -15,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *leftTableView;
 @property (strong, nonatomic) IBOutlet UITableView *rightTableView;
 
-@property(strong,nonatomic)NSArray* subCategories;
+@property(strong,nonatomic)NSArray* subDatas;
 
 @end
 
@@ -31,39 +33,32 @@
 {
     if (tableView==self.leftTableView) {//如果是左边的tableView
         
-        return  self.models.count;
+        return [self.dataSource numberOfRowsInLeftTableView:self];
         
     }else{
-        return self.subCategories.count;
+        return self.subDatas.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    UITableViewCell* cell;
+    
     if (tableView==self.leftTableView) {
-        CategoryModel* cateModel=self.models[indexPath.row];
-        static NSString* identifier=@"leftCell";
-        UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:identifier];
-        if (cell==nil) {
-            cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        }
-        cell.textLabel.text=cateModel.name;
-        cell.backgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
-        cell.selectedBackgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
-        cell.imageView.image=[UIImage imageNamed:cateModel.small_icon];
-        cell.imageView.highlightedImage=[UIImage imageNamed:cateModel.small_highlighted_icon];
-        return cell;
+        
+        cell=[LeftTableViewCell cellWithTableView:tableView];
+        
+        cell.textLabel.text=[self.dataSource twoTableView:self andLeftTitleInRow:indexPath.row];
+        
+        
     }else{
-        static NSString* identifier=@"rightCell";
-        UITableViewCell* cell=[tableView dequeueReusableCellWithIdentifier:identifier];
-        if (cell==nil) {
-            cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        }
-        cell.textLabel.text=self.subCategories[indexPath.row];
-        cell.backgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_rightpart"]];
-        cell.selectedBackgroundView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_right_selected"]];
-         return cell;
+        
+        cell=[RightTableViewCell cellWithTableView:tableView];
+        
+        cell.textLabel.text=self.subDatas[indexPath.row];
     }
+    
+     return cell;
 }
 
 #pragma mark--tableView代理
@@ -71,9 +66,7 @@
     
     if (tableView==self.leftTableView) {
         
-         CategoryModel* cateModel=self.models[indexPath.row];
-        
-        self.subCategories=cateModel.subcategories;
+        self.subDatas=[self.dataSource twoTableView:self andSubDataOfRow:indexPath.row];
         
         [self.rightTableView reloadData];
         
