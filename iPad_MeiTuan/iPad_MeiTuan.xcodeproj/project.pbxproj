@@ -17,6 +17,20 @@
 		CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */; };
 		CF19AD3F1D02B42800634E1A /* JSTopItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD3E1D02B42800634E1A /* JSTopItemView.m */; };
 		CF19AD411D02B47700634E1A /* JSTopItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD401D02B47700634E1A /* JSTopItemView.xib */; };
+		CF19AD441D02BE5600634E1A /* JSCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD431D02BE5600634E1A /* JSCategoryVC.m */; };
+		CF19AD471D02C0B300634E1A /* JSTwoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD461D02C0B300634E1A /* JSTwoTableView.m */; };
+		CF19AD491D02C0BF00634E1A /* JSTwoTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD481D02C0BF00634E1A /* JSTwoTableView.xib */; };
+		CF19AD4D1D02C25200634E1A /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD4A1D02C25200634E1A /* categories.plist */; };
+		CF19AD4E1D02C25200634E1A /* gz.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD4B1D02C25200634E1A /* gz.plist */; };
+		CF19AD4F1D02C25200634E1A /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF19AD4C1D02C25200634E1A /* sorts.plist */; };
+		CF19AD621D02C2DC00634E1A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD531D02C2DC00634E1A /* MJExtensionConst.m */; };
+		CF19AD631D02C2DC00634E1A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD551D02C2DC00634E1A /* MJFoundation.m */; };
+		CF19AD641D02C2DC00634E1A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD571D02C2DC00634E1A /* MJProperty.m */; };
+		CF19AD651D02C2DC00634E1A /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD591D02C2DC00634E1A /* MJType.m */; };
+		CF19AD661D02C2DC00634E1A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD5B1D02C2DC00634E1A /* NSObject+MJCoding.m */; };
+		CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD5D1D02C2DC00634E1A /* NSObject+MJKeyValue.m */; };
+		CF19AD681D02C2DC00634E1A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD5F1D02C2DC00634E1A /* NSObject+MJProperty.m */; };
+		CF19AD691D02C2DC00634E1A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19AD611D02C2DC00634E1A /* NSString+MJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +71,31 @@
 		CF19AD3D1D02B42800634E1A /* JSTopItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopItemView.h; sourceTree = "<group>"; };
 		CF19AD3E1D02B42800634E1A /* JSTopItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopItemView.m; sourceTree = "<group>"; };
 		CF19AD401D02B47700634E1A /* JSTopItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopItemView.xib; sourceTree = "<group>"; };
+		CF19AD421D02BE5600634E1A /* JSCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCategoryVC.h; sourceTree = "<group>"; };
+		CF19AD431D02BE5600634E1A /* JSCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCategoryVC.m; sourceTree = "<group>"; };
+		CF19AD451D02C0B300634E1A /* JSTwoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTwoTableView.h; sourceTree = "<group>"; };
+		CF19AD461D02C0B300634E1A /* JSTwoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTwoTableView.m; sourceTree = "<group>"; };
+		CF19AD481D02C0BF00634E1A /* JSTwoTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTwoTableView.xib; sourceTree = "<group>"; };
+		CF19AD4A1D02C25200634E1A /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		CF19AD4B1D02C25200634E1A /* gz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gz.plist; sourceTree = "<group>"; };
+		CF19AD4C1D02C25200634E1A /* sorts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sorts.plist; sourceTree = "<group>"; };
+		CF19AD511D02C2DC00634E1A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		CF19AD521D02C2DC00634E1A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		CF19AD531D02C2DC00634E1A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		CF19AD541D02C2DC00634E1A /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		CF19AD551D02C2DC00634E1A /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		CF19AD561D02C2DC00634E1A /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		CF19AD571D02C2DC00634E1A /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		CF19AD581D02C2DC00634E1A /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		CF19AD591D02C2DC00634E1A /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		CF19AD5A1D02C2DC00634E1A /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		CF19AD5B1D02C2DC00634E1A /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		CF19AD5C1D02C2DC00634E1A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		CF19AD5D1D02C2DC00634E1A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		CF19AD5E1D02C2DC00634E1A /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		CF19AD5F1D02C2DC00634E1A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		CF19AD601D02C2DC00634E1A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		CF19AD611D02C2DC00634E1A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +157,10 @@
 		CF19AD041D02AE5F00634E1A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF19AD501D02C2DC00634E1A /* MJExtension */,
+				CF19AD4A1D02C25200634E1A /* categories.plist */,
+				CF19AD4B1D02C25200634E1A /* gz.plist */,
+				CF19AD4C1D02C25200634E1A /* sorts.plist */,
 				CF19AD071D02AE5F00634E1A /* AppDelegate.h */,
 				CF19AD081D02AE5F00634E1A /* AppDelegate.m */,
 				CF19AD0D1D02AE5F00634E1A /* Main.storyboard */,
@@ -159,6 +202,9 @@
 				CF19AD3D1D02B42800634E1A /* JSTopItemView.h */,
 				CF19AD3E1D02B42800634E1A /* JSTopItemView.m */,
 				CF19AD401D02B47700634E1A /* JSTopItemView.xib */,
+				CF19AD451D02C0B300634E1A /* JSTwoTableView.h */,
+				CF19AD461D02C0B300634E1A /* JSTwoTableView.m */,
+				CF19AD481D02C0BF00634E1A /* JSTwoTableView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,8 +216,34 @@
 				CF19AD0B1D02AE5F00634E1A /* ViewController.m */,
 				CF19AD3A1D02B22F00634E1A /* JSNavigationController.h */,
 				CF19AD3B1D02B22F00634E1A /* JSNavigationController.m */,
+				CF19AD421D02BE5600634E1A /* JSCategoryVC.h */,
+				CF19AD431D02BE5600634E1A /* JSCategoryVC.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF19AD501D02C2DC00634E1A /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CF19AD511D02C2DC00634E1A /* MJExtension.h */,
+				CF19AD521D02C2DC00634E1A /* MJExtensionConst.h */,
+				CF19AD531D02C2DC00634E1A /* MJExtensionConst.m */,
+				CF19AD541D02C2DC00634E1A /* MJFoundation.h */,
+				CF19AD551D02C2DC00634E1A /* MJFoundation.m */,
+				CF19AD561D02C2DC00634E1A /* MJProperty.h */,
+				CF19AD571D02C2DC00634E1A /* MJProperty.m */,
+				CF19AD581D02C2DC00634E1A /* MJType.h */,
+				CF19AD591D02C2DC00634E1A /* MJType.m */,
+				CF19AD5A1D02C2DC00634E1A /* NSObject+MJCoding.h */,
+				CF19AD5B1D02C2DC00634E1A /* NSObject+MJCoding.m */,
+				CF19AD5C1D02C2DC00634E1A /* NSObject+MJKeyValue.h */,
+				CF19AD5D1D02C2DC00634E1A /* NSObject+MJKeyValue.m */,
+				CF19AD5E1D02C2DC00634E1A /* NSObject+MJProperty.h */,
+				CF19AD5F1D02C2DC00634E1A /* NSObject+MJProperty.m */,
+				CF19AD601D02C2DC00634E1A /* NSString+MJExtension.h */,
+				CF19AD611D02C2DC00634E1A /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF19AD411D02B47700634E1A /* JSTopItemView.xib in Resources */,
+				CF19AD491D02C0BF00634E1A /* JSTwoTableView.xib in Resources */,
+				CF19AD4F1D02C25200634E1A /* sorts.plist in Resources */,
 				CF19AD111D02AE5F00634E1A /* Assets.xcassets in Resources */,
+				CF19AD4E1D02C25200634E1A /* gz.plist in Resources */,
+				CF19AD4D1D02C25200634E1A /* categories.plist in Resources */,
 				CF19AD0F1D02AE5F00634E1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,11 +383,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF19AD621D02C2DC00634E1A /* MJExtensionConst.m in Sources */,
 				CF19AD3C1D02B22F00634E1A /* JSNavigationController.m in Sources */,
+				CF19AD671D02C2DC00634E1A /* NSObject+MJKeyValue.m in Sources */,
 				CF19AD0C1D02AE5F00634E1A /* ViewController.m in Sources */,
+				CF19AD641D02C2DC00634E1A /* MJProperty.m in Sources */,
+				CF19AD631D02C2DC00634E1A /* MJFoundation.m in Sources */,
+				CF19AD651D02C2DC00634E1A /* MJType.m in Sources */,
 				CF19AD091D02AE5F00634E1A /* AppDelegate.m in Sources */,
+				CF19AD691D02C2DC00634E1A /* NSString+MJExtension.m in Sources */,
 				CF19AD3F1D02B42800634E1A /* JSTopItemView.m in Sources */,
+				CF19AD681D02C2DC00634E1A /* NSObject+MJProperty.m in Sources */,
+				CF19AD661D02C2DC00634E1A /* NSObject+MJCoding.m in Sources */,
 				CF19AD061D02AE5F00634E1A /* main.m in Sources */,
+				CF19AD471D02C0B300634E1A /* JSTwoTableView.m in Sources */,
+				CF19AD441D02BE5600634E1A /* JSCategoryVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
