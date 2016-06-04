@@ -85,8 +85,14 @@
 -(void)twoTableView:(JSTwoTableView *)twoTableView didSelectedLeftIndex:(NSInteger)leftIndex{
     CategoryModel* cateModel=self.Categories[leftIndex];
     
-    NSDictionary* userInfo=@{JSCategoryDidChangeNotificationKey:cateModel};
-    [[NSNotificationCenter defaultCenter] postNotificationName:JSCategoryDidChangeNotification object:nil userInfo:userInfo];
+    //如果没有子菜单，就发送通知
+    if (cateModel.subcategories.count==0) {
+        
+         NSDictionary* userInfo=@{JSCategoryDidChangeNotificationKey:cateModel};
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:JSCategoryDidChangeNotification object:nil userInfo:userInfo];
+    }
+    
 }
 
 -(void)twoTableView:(JSTwoTableView *)twoTableView didSelectedRightIndex:(NSInteger)rightIndex andLeftIndex:(NSInteger)leftIndex{
@@ -99,8 +105,4 @@
     
 }
 
-
--(void)dealloc{
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
 @end

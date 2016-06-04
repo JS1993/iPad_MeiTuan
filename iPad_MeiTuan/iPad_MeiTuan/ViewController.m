@@ -12,6 +12,7 @@
 #import "JSZoneViewController.h"
 #import "JSConst.h"
 #import "CategoryModel.h"
+#import "ZoneModel.h"
 
 @interface ViewController ()
 
@@ -59,8 +60,35 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:JSCategoryDidChangeNotification object:nil];
     
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(zoneDidChange:) name:JSZoneDidChangeNotification object:nil];
+    
 }
 
+//区域改变的通知方法
+-(void)zoneDidChange:(NSNotification*)noti{
+    
+    ZoneModel* zone=noti.userInfo[JSZoneDidChangeNotificationKey];
+    
+    NSString* subZone=noti.userInfo[JSSubZoneDidChangeNotificationKey];
+    
+    JSTopItemView* zoneItemView=(JSTopItemView*)self.zoneItem.customView;
+    
+    if (!subZone) {
+        [zoneItemView setTitle:@"广州"];
+        [zoneItemView setSubTitle:zone.name];
+    }else{
+        
+        [zoneItemView setTitle:zone.name];
+        [zoneItemView setSubTitle:subZone];
+        
+    }
+    
+    //退出控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+//分类改变的通知方法
 -(void)categoryDidChange:(NSNotification*)noti{
     CategoryModel* category=noti.userInfo[JSCategoryDidChangeNotificationKey];
     NSString* subCategory=noti.userInfo[JSSubCategoryDidChangeNotificationKey];
@@ -79,6 +107,11 @@
         [categoryItemView setSubTitle:subCategory];
         
     }
+    
+    [categoryItemView setImageWithName:category.icon highImage:category.highlighted_icon];
+    
+    //退出控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)setUpNav{
     
@@ -139,6 +172,10 @@
  */
 -(void)sortClicked{
     
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 @end

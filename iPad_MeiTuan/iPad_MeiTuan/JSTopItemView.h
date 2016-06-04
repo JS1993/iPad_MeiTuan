@@ -20,4 +20,6 @@
 
 - (void)addTarget:(id)target action:(SEL)action;
 
+- (void)setImageWithName:(NSString *)name highImage:(NSString *)highImage;
+
 @end

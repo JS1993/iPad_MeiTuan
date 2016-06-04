@@ -11,5 +11,9 @@
 extern NSString* const JSCategoryDidChangeNotification;
 extern NSString* const JSCategoryDidChangeNotificationKey;
 extern NSString* const JSSubCategoryDidChangeNotificationKey;
+
 extern NSString* const JSZoneDidChangeNotification;
+extern NSString* const JSZoneDidChangeNotificationKey;
+extern NSString* const JSSubZoneDidChangeNotificationKey;
+
 extern NSString* const JSSortDidChangeNotification;

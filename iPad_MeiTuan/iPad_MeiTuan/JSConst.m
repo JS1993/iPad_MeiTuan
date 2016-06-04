@@ -8,12 +8,12 @@
 
 #import "JSConst.h"
 
- NSString* const JSCategoryDidChangeNotification=@"JSCategoryDidChangeNotification";
-
+NSString* const JSCategoryDidChangeNotification=@"JSCategoryDidChangeNotification";
 NSString* const JSCategoryDidChangeNotificationKey=@"JSCategoryDidChangeNotificationKey";
-
 NSString* const JSSubCategoryDidChangeNotificationKey=@"JSSubCategoryDidChangeNotificationKey";
 
- NSString* const JSZoneDidChangeNotification=@"JSZoneDidChangeNotification";
+NSString* const JSZoneDidChangeNotification=@"JSZoneDidChangeNotification";
+NSString* const JSZoneDidChangeNotificationKey=@"JSZoneDidChangeNotificationKey";
+NSString* const JSSubZoneDidChangeNotificationKey=@"JSSubZoneDidChangeNotificationKey";
 
  NSString* const JSSortDidChangeNotification=@"JSSortDidChangeNotification";
