@@ -17,3 +17,4 @@ NSString* const JSZoneDidChangeNotificationKey=@"JSZoneDidChangeNotificationKey"
 NSString* const JSSubZoneDidChangeNotificationKey=@"JSSubZoneDidChangeNotificationKey";
 
  NSString* const JSSortDidChangeNotification=@"JSSortDidChangeNotification";
+ NSString* const JSSortDidChangeNotificationKey=@"JSSortDidChangeNotificationKey";

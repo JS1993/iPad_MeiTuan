@@ -17,3 +17,4 @@ extern NSString* const JSZoneDidChangeNotificationKey;
 extern NSString* const JSSubZoneDidChangeNotificationKey;
 
 extern NSString* const JSSortDidChangeNotification;
+extern NSString* const JSSortDidChangeNotificationKey;

@@ -13,12 +13,15 @@
 #import "JSConst.h"
 #import "CategoryModel.h"
 #import "ZoneModel.h"
+#import "JSSortViewController.h"
 
 @interface ViewController ()
 
 @property(nonatomic,strong)JSCategoryVC* categoryVC;
 
 @property(nonatomic,strong)JSZoneViewController* zoneVC;
+
+@property(nonatomic,strong)JSSortViewController* sortVC;
 
 @property(nonatomic,weak)UIBarButtonItem* categoryItem;
 
@@ -30,6 +33,17 @@
 @end
 
 @implementation ViewController
+
+
+/*排序方式界面懒加载*/
+-(JSSortViewController *)sortVC
+{
+    if (_sortVC==nil) {
+        _sortVC=[[JSSortViewController alloc]init];
+        _sortVC.modalPresentationStyle=UIModalPresentationPopover;
+    }
+    return _sortVC;
+}
 
 
 /*地区界面懒加载*/
@@ -58,10 +72,28 @@
    
     [self setUpNav];
     
+    [self setUpNoti];
+    
+}
+
+-(void)setUpNoti{
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:JSCategoryDidChangeNotification object:nil];
     
-     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(zoneDidChange:) name:JSZoneDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(zoneDidChange:) name:JSZoneDidChangeNotification object:nil];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sortDidChange:) name:JSSortDidChangeNotification object:nil];
+}
+
+//排序方式改变时调用
+-(void)sortDidChange:(NSNotification*)noti{
+    //拿到顶部的分类视图进行修改
+    JSTopItemView* sortItemView=(JSTopItemView*)self.sortItem.customView;
+    
+    [sortItemView setSubTitle:noti.userInfo[JSSortDidChangeNotificationKey]];
+    
+    //退出控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //区域改变的通知方法
@@ -171,7 +203,9 @@
  *  点击了排序
  */
 -(void)sortClicked{
+    self.sortVC.popoverPresentationController.barButtonItem=self.sortItem;
     
+    [self presentViewController:self.sortVC animated:YES completion:nil];
 }
 
 -(void)dealloc{
