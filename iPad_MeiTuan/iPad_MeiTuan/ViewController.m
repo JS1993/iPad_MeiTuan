@@ -41,6 +41,7 @@
     if (_sortVC==nil) {
         _sortVC=[[JSSortViewController alloc]init];
         _sortVC.modalPresentationStyle=UIModalPresentationPopover;
+        _sortVC.view.backgroundColor=[UIColor whiteColor];
         _sortVC.popoverPresentationController.delegate=self;
     }
     return _sortVC;
@@ -52,6 +53,7 @@
 {
     if (_zoneVC==nil) {
         _zoneVC=[[JSZoneViewController alloc]init];
+         _zoneVC.view.backgroundColor=[UIColor whiteColor];
         _zoneVC.modalPresentationStyle=UIModalPresentationPopover;
         _zoneVC.popoverPresentationController.delegate=self;
     }
@@ -64,6 +66,7 @@
 {
     if (_categoryVC==nil) {
         _categoryVC=[[JSCategoryVC alloc]init];
+         _categoryVC.view.backgroundColor=[UIColor whiteColor];
         _categoryVC.modalPresentationStyle=UIModalPresentationPopover;
         _categoryVC.popoverPresentationController.delegate=self;
     }
@@ -201,6 +204,8 @@
     
     self.categoryVC.popoverPresentationController.barButtonItem=self.categoryItem;
     
+    _categoryVC.popoverPresentationController.delegate=self;
+    
     [self presentViewController:self.categoryVC animated:YES completion:nil];
     
     [self disableAllItems];
@@ -211,6 +216,8 @@
  */
 -(void)zoneClicked{
     self.zoneVC.popoverPresentationController.barButtonItem=self.zoneItem;
+    
+    _zoneVC.popoverPresentationController.delegate=self;
     
     [self presentViewController:self.zoneVC animated:YES completion:nil];
     
@@ -223,6 +230,8 @@
  */
 -(void)sortClicked{
     self.sortVC.popoverPresentationController.barButtonItem=self.sortItem;
+    
+    _sortVC.popoverPresentationController.delegate=self;
     
     [self presentViewController:self.sortVC animated:YES completion:nil];
     
@@ -250,11 +259,6 @@
 //此处有BUG，连续点击两次之后就不响应了
 - (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
     
-    [self enableAllItems];
-}
-
-//修复BUG辅助方法，当两次之后，双击其他空白区域，可恢复，但是每次都需要双击，尚不完善
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self enableAllItems];
 }
 
